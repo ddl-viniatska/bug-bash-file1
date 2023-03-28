@@ -2,14 +2,7 @@ project: domino_feast
 registry: data/registry.db
 provider: local
 offline_store:
-    type: snowflake.offline
-    user: ${FEAST_SNOWFLAKE_USER}
-    database: DIABETES
-    account: kma55258
-    password: ${FEAST_SNOWFLAKE_PASSWORD}
-    role: public
-    warehouse: DOMINODATALAB
+    type: file
 online_store:
-    type: bigtable
-    instance: bigtable-test
+    type: sqlite
 entity_key_serialization_version: 2

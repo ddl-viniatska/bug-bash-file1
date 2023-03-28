@@ -3,13 +3,14 @@ registry: data/registry.db
 provider: local
 offline_store:
     type: redshift
-    cluster_id: test
-    region: us-west2
+    cluster_id: jj
+    region: q
     user: ${FEAST_REDSHIFT_USER}
-    database: test
-    s3_staging_location: etst
-    iam_role: test
+    database: jjj
+    s3_staging_location: jj
+    iam_role: jj
 online_store:
-    type: bigtable
-    instance: bigrable-test
+    type: redis
+    redis_type: redis
+    connection_string: jjjj:7777,password=${FEAST_REDIS_PASSWORD}
 entity_key_serialization_version: 2

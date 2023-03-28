@@ -2,7 +2,8 @@ project: domino_feast
 registry: data/registry.db
 provider: local
 offline_store:
-    type: bigquery
+    type: file
 online_store:
-    type: datastore
+    type: dynamodb
+    region: us-west-2
 entity_key_serialization_version: 2

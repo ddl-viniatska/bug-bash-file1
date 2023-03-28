@@ -2,9 +2,8 @@ project: domino_feast
 registry: data/registry.db
 provider: local
 offline_store:
-    type: file
+    type: bigquery
 online_store:
-    type: redis
-    redis_type: redis
-    connection_string: redis-19716.c285.us-west-2-2.ec2.cloud.redislabs.com:11111,password=${FEAST_REDIS_PASSWORD},ssl=true
+    type: bigtable
+    instance: bigtable-test
 entity_key_serialization_version: 2
